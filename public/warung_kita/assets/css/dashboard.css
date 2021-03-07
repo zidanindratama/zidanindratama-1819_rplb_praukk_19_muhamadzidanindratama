@@ -1,0 +1,37 @@
+/* .satu {
+       background : #5BB14D;
+       height : 200px;
+       border-radius : 10px;
+} */
+
+.stuff {
+       margin-top: 120px;
+       margin-bottom : 90px;
+}
+
+.satu {
+       background : #E24C4C !important;
+}
+.dua {
+       background : #5BB14D !important;
+}
+.tiga {
+       background : #D3E431 !important;
+}
+.empat {
+       background : #4DB1A7 !important;
+}
+
+.card {
+       border : 1px solid black;
+       background: #F8F9FA !important;
+       color : #011627 !important;
+}
+
+/* .card-title {
+       color : #fff;
+}
+
+.haha-1 {
+       color : #fff;
+} */

@@ -1,0 +1,21 @@
+.list-makanan {
+    padding-top: 110px;
+}
+
+.tambah-makanan {
+    padding-top: 200px;
+}
+
+.tambah-makanan,
+.list-makanan,
+.list-reservasi {
+    min-height: 100vh;
+}
+
+select option {
+    margin: 40px;
+    background: rgba(35, 44, 51, 0.7);
+    border: none;
+    color: #fff;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+}

@@ -1,0 +1,19 @@
+user buka web, yang kebuka itu landing page
+user nanti login terus diarahin buat mesen makanan
+pesen makanan bisa banyak karena udah pake package cart
+di halaman cart ada button checkout yang gunanya buat passing data cart ke halaman checkut nanti
+di halaman checkout nanti user ngisi form yang isinya
+	- user_id
+	- name (atas nama), karena bisa aja yang punya akun mesenin punya orang lain
+	- no_meja
+	- keterangan
+	- status (defaultnya itu pending)
+	- base_total_price
+	- tax_amount
+	- tax_percent
+	- grand_total
+package yang dipake
+	- sweet-alert
+	- cart
+	- activity log
+	- larecipe

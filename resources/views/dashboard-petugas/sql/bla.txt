@@ -1,0 +1,7 @@
+DELIMITER //
+CREATE FUNCTION ngitungTotal(itemBaseTotal int, itemTaxAmount int)
+returns int
+DETERMINISTIC
+BEGIN
+return itemBaseTotal + itemTaxAmount
+End //

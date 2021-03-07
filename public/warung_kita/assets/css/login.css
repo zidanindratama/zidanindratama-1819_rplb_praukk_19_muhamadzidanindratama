@@ -1,0 +1,33 @@
+body {
+       font-family : 'Montserrat', sans-serif;
+}
+
+h1,
+h2,
+h3 {
+       font-weight : 900;
+}
+
+.btn-primary {
+       background : #011627 !important;
+       border-radius : 0;
+       border-color : #011627 !important;
+       border-radius : 5px;
+       color : #fff !important;
+       width : 100% !important;
+}
+
+.btn-primary:hover {
+       background : #DE8E5D !important;
+       border-color : #DE8E5D !important;
+       color : #011627 !important;
+}
+
+.text {
+       font-family : 'Montserrat', sans-serif;
+       font-weight : 900;
+}
+.sign {
+       margin-bottom : 20px;
+       margin-top : 10px;
+}
