@@ -66,7 +66,7 @@
                                                                     <tbody>
                                                                        <tr>
                                                                             <td>{{$order->id}}</td>
-                                                                            <td>{{ $order->first_name }} {{$order->last_name}}</td>
+                                                                            <td>{{ $order->customer_first_name }} {{ $order->customer_last_name }}</td>
                                                                             <td>{{ $order->created_at }}</td>
                                                                             <td>@currency($order->base_total_price)</td>
                                                                             <td>@currency($order->tax_amount)</td>
