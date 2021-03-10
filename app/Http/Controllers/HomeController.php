@@ -8,6 +8,7 @@ use App\User;
 use App;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
+use RealRashid\SweetAlert\Facades\Alert;
 use Session ;
 
 class HomeController extends Controller
@@ -40,9 +41,47 @@ class HomeController extends Controller
 
     public function akunDefault(){
         $user = DB::table('users')->where('id', Auth::id())->first();
-        // var_dump($user);
-        // echo $user->name;
         return view('default.akun', compact('user'));
+    }
+
+    public function ubahAkun(){
+        $user = DB::table('users')->where('id', Auth::id())->first();
+        return view('default.akun.edit', compact('user'));
+    }
+
+    public function ubahAkunProses(Request $request, $id){
+        
+        $this->validate($request, [
+            'name' => 'required',
+            'username' => 'required',
+        ]);
+
+        $user = User::findorfail($id);
+
+        if ($request->has('gambar')) {
+            $gambar = $request->gambar;
+            $new_gambar = time().$gambar->getClientOriginalName();
+            $gambar->move('warung_kita/assets/img/uploads/', $new_gambar);
+
+            $upload_data = [
+                'name' => $request->name,
+                'username' => $request->username,
+                'gambar' => 'warung_kita/assets/img/uploads/'.$new_gambar,
+            ];
+        }
+        else{
+            $upload_data = [
+                'name' => $request->name,
+                'username' => $request->username,
+            ];
+        }
+   
+        $user->update($upload_data);
+
+        if($user){
+            Alert::success('Berhasil','Data akun berhasil diubah');
+        }
+        return redirect('/warung/akun');
     }
 
     public function about()

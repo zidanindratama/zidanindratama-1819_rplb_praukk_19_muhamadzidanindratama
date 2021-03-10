@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Order;
 use App\Payment;
 
-class DashboardPaymentController extends Controller
+class PaymentController extends Controller
 {
     public function notification(Request $request) {
         $payload = $request->getContent();
@@ -119,7 +119,7 @@ class DashboardPaymentController extends Controller
 
 		\Session::flash('success', "Thank you for completing the payment process!");
 
-		return redirect('/orders/received/'. $order->id);
+		return redirect('/warung/orders/received/'. $order->id);
     }
 
     public function failed(Request $request) {
@@ -128,7 +128,7 @@ class DashboardPaymentController extends Controller
 
 		\Session::flash('error', "Sorry, we couldn't process your payment.");
 
-		return redirect('/orders/received/'. $order->id);
+		return redirect('/warung/orders/received/'. $order->id);
     }
 
     public function unfinish(Request $request) {
@@ -137,6 +137,6 @@ class DashboardPaymentController extends Controller
 
 		\Session::flash('error', "Sorry, we couldn't process your payment.");
 
-		return redirect('/orders/received/'. $order->id);
+		return redirect('/warung/orders/received/'. $order->id);
     }
 }

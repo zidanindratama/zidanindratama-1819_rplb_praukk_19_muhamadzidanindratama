@@ -48,6 +48,11 @@
                             </div>
                         </li>
                         <li class="">
+                            <a href="/laporan" class="nav-link text-left {{ (request()->is('laporan*')) ? 'active' : '' }}" role="button" aria-haspopup="true" aria-expanded="false">
+                                <i class="flaticon-bar-chart-1"></i> Laporan
+                            </a>
+                        </li>
+                        <li class="">
                             <a href="/akun" class="nav-link text-left {{ (request()->is('akun*')) ? 'active' : '' }}" role="button" aria-haspopup="true" aria-expanded="false">
                                 <i class="flaticon-bar-chart-1"></i> Akun
                             </a>
@@ -96,6 +101,11 @@
                         <li class="">
                             <a href="/menu" class="nav-link text-left {{ (request()->is('menu*')) ? 'active' : '' }}" role="button" aria-haspopup="true" aria-expanded="false">
                                 <i class="flaticon-bar-chart-1"></i> Menu
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="/laporan" class="nav-link text-left {{ (request()->is('laporan*')) ? 'active' : '' }}" role="button" aria-haspopup="true" aria-expanded="false">
+                                <i class="flaticon-bar-chart-1"></i> Laporan
                             </a>
                         </li>
                         <li class="">

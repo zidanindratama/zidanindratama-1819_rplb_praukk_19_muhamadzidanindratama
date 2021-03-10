@@ -65,10 +65,10 @@ class MenuController extends Controller
             'status' => $request->status,
             'price' => $request->price,
             'deskripsi' => $request->deskripsi,
-            'gambar' => 'public/uploads/posts/'.$new_gambar,
+            'gambar' => 'warung_kita/assets/img/uploads/'.$new_gambar,
         ]);
 
-        $gambar->move('public/uploads/posts/', $new_gambar);
+        $gambar->move('warung_kita/assets/img/uploads/', $new_gambar);
 
         
         if($post){
@@ -129,14 +129,14 @@ class MenuController extends Controller
         if ($request->has('gambar')) {
             $gambar = $request->gambar;
             $new_gambar = time().$gambar->getClientOriginalName();
-            $gambar->move('public/uploads/posts/', $new_gambar);
+            $gambar->move('warung_kita/assets/img/uploads/', $new_gambar);
 
             $upload_data = [
                 'name' => $request->name,
                 'status' => $request->status,
                 'price' => $request->price,
                 'deskripsi' => $request->deskripsi,
-                'gambar' => 'public/uploads/posts/'.$new_gambar,
+                'gambar' => 'warung_kita/assets/img/uploads/'.$new_gambar,
             ];
         }
         else{
