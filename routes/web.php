@@ -131,8 +131,10 @@ Route::get('/warung/akun', 'HomeController@akunDefault');
 Route::get('/warung/about', 'HomeController@about');
 Route::get('/warung/cara', 'HomeController@cara');
 Route::get('/warung/list', 'DefaultController@list');
-Route::get('/warung/{warung}', 'DefaultController@show');
 Route::get('/warung/create', 'DefaultController@create');
+Route::get('/warung/{warung}', 'DefaultController@show')->name('warung.show');
+Route::get('/warung/akun/edit', 'HomeController@ubahAkun');
+Route::patch('/warung/akun/{ubah}', 'HomeController@ubahAkunProses');
 
 /*
 |--------------------------------------------------------------------------
