@@ -44,7 +44,10 @@
                                                         @if (!$order->isPaid())
                                                             <a href="{{ $order->payment_url }}" class="btn btn-primary">Lakukan Pembayaran</a>
                                                         @endif
-                                                        <a href="{{ url('/warung/orders/received/'. $order->id) }}" class="btn btn-info">details</a>
+                                                        @if ($order->isPaid())
+                                                            <a href="{{ url('/warung/orders/receipt/'. $order->id) }}" class="btn btn-primary">Cetak kwitansi</a>
+                                                        @endif
+                                                        <a href="{{ url('/warung/orders/received/'. $order->id) }}" class="btn btn-info">Detail</a>
                                                     </td>
                                                 </tr>
                                             @empty

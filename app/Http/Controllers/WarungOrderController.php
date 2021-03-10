@@ -186,6 +186,15 @@ class WarungOrderController extends Controller
 		return view('default.order.received', compact('order'));
 	}
 
+    public function receipt($orderId)
+	{
+        $order = Order::findOrFail($orderId);
+
+        // dd($order);
+
+		return view('default.order.receipt', compact('order'));
+	}
+
     public function list()
     {
         $orders = Order::where('user_id', Auth::id())

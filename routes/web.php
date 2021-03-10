@@ -158,6 +158,7 @@ Route::get('/warung/order/list', 'WarungOrderController@list');
 Route::get('/warung/order/checkout', 'WarungOrderController@checkout');
 Route::post('/warung/order/checkout', 'WarungOrderController@doCheckout');
 Route::get('/warung/orders/received/{orderID}', 'WarungOrderController@received');
+Route::get('/warung/orders/receipt/{orderID}', 'WarungOrderController@receipt');
 Route::get('/warung/order/{order}', 'WarungOrderController@show');
 Route::get('/warung/order/create', 'WarungOrderController@create');
 

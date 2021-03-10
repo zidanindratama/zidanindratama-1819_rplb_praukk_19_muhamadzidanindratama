@@ -13,7 +13,7 @@
               <section class="contact">
                      <div class="container">
                             <div class="py-5">
-                                   <h2 class="py-3">Orderan {{ $order->name }}</h2>
+                                   <h2 class="py-3">Orderan {{ $order->customer_first_name }}</h2>
                                    <div class="heading-line"></div>
                             </div>
 							<div class="table-responsive">
