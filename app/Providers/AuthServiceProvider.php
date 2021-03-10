@@ -25,6 +25,12 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
 
-        //
+       Gate::define('viewLarecipe', function($user, $documentation) {
+            if($user->role == 'Administrator')
+            {
+                return true;
+            }
+            return false;
+        });
     }
 }

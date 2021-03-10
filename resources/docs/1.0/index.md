@@ -1,0 +1,10 @@
+- ## Dokumentasi WarungKita
+    - [Halaman Utama](/{{route}}/{{version}}/overview)
+    - [User](/{{route}}/{{version}}/user)
+    - [Menu](/{{route}}/{{version}}/menu)
+    - [Cart](/{{route}}/{{version}}/cart)
+    - [Order](/{{route}}/{{version}}/order)
+    - [Order Detail](/{{route}}/{{version}}/orderdetail)
+    - [Payment](/{{route}}/{{version}}/payment)
+    - [Laporan](/{{route}}/{{version}}/laporan)
+    - [Route](/{{route}}/{{version}}/route)
