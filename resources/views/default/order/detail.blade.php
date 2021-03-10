@@ -4,7 +4,7 @@
 <section class="home detail" style="padding-top: 50px;">
               <div class="container">
                      <div class="row mt-5">
-                            <div class="col-lg-6 mt-5 py-5 pl-5">
+                            <div class="col-lg-6 mt-5 py-5">
                                    <img src="{{ asset( $menu->gambar ) }}" alt="" class="img-fluid">
                             </div>
                             <div class="col-lg-6 my-auto">
@@ -33,6 +33,10 @@
                                           </div>
                                    </div>
 								</form>
+                            </div>
+                            <div class="col-lg-12 mt-5 pt-5">
+                                   <h1>Komentar</h1>
+                                   @include('layout-default.disqus')
                             </div>
                      </div>
               </div>
