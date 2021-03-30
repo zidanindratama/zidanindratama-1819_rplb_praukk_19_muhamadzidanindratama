@@ -3,7 +3,7 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 		
-		<title>Laporan pembayaran SPP</title>
+		<title>Laporan Pemasukan WarungKita</title>
 
 	</head>
 	<body>
@@ -72,6 +72,9 @@
 			.underline {
 				text-decoration:underline;
 			}
+			div.page_break + div.page_break{
+				page-break-before: always;
+			}
 			
 			table {
 				font-family: Arial, Helvetica, sans-serif;
@@ -128,7 +131,7 @@
 		
 		<div class="size2 text-center mb-1">LAPORAN PEMASUKAN</div>
 
-		<h3 class="m-4">Pemasukan</h3>
+		<h3 class="m-4">Pemasukan : @currency($pemasukan->where('payment_status', 'paid')->sum('grand_total'))</h3>
 		<table class="table-center mb-1">
 			<thead>
 				<tr>
@@ -155,6 +158,34 @@
 				@endforeach
 			</tbody>
 		</table>
+		<div class="page_break">
+			<table class="table-center mb-1">
+				<thead>
+					<tr>
+						<th>Invoice</th>
+						<th>Name</th>
+						<th>No Meja</th>
+						<th>Keterangan</th>
+						<th>Status Pembayaran</th>
+						<th>Jumlah Pajak</th>
+						<th>Jumlah Bayar</th>
+					</tr>
+				</thead>
+				<tbody>
+					@foreach($belum_bayar as $belum)
+					<tr>
+						<td>{{ $belum->code }}</td>
+						<td>{{ $belum->customer_first_name }}</td>
+						<td>{{ $belum->no_meja }}</td>
+						<td>{{ $belum->keterangan }}</td>
+						<td>{{ $belum->payment_status }}</td>
+						<td>{{ $belum->tax_amount }}</td>
+						<td>{{ $belum->grand_total }}</td>
+					</tr>
+					@endforeach
+				</tbody>
+			</table>
+		</div>
 		<!-- /content -->
 		
 		<!-- footer -->

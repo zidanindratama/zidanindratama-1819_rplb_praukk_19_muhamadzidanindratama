@@ -1,5 +1,5 @@
 @extends('layout-default.home')
-
+@section('judul', 'Checkout | WarungKita')
 @section('content')
 			<section class="checkout mt-5 py-5 ">
               	<div class="container mt-5">
@@ -69,7 +69,7 @@
 										<div class="card shadow mt-3">
 											<div class="card-body">
 												<h4 class="card-title">Meja No 2</h4>
-												<input type="radio" name="no_meja" id="" value="1"> Pilih
+												<input type="radio" name="no_meja" id="" value="2"> Pilih
 											</div>
 										</div>
 									</div>
@@ -77,7 +77,7 @@
 										<div class="card shadow mt-3">
 											<div class="card-body">
 												<h4 class="card-title">Meja No 3</h4>
-												<input type="radio" name="no_meja" id="" value="1"> Pilih
+												<input type="radio" name="no_meja" id="" value="3"> Pilih
 											</div>
 										</div>
 									</div>
@@ -85,7 +85,7 @@
 										<div class="card shadow mt-3">
 											<div class="card-body">
 												<h4 class="card-title">Meja No 4</h4>
-												<input type="radio" name="no_meja" id="" value="1"> Pilih
+												<input type="radio" name="no_meja" id="" value="4"> Pilih
 											</div>
 										</div>
 									</div>
@@ -93,7 +93,7 @@
 										<div class="card shadow mt-3">
 											<div class="card-body">
 												<h4 class="card-title">Meja No 5</h4>
-												<input type="radio" name="no_meja" id="" value="1"> Pilih
+												<input type="radio" name="no_meja" id="" value="5"> Pilih
 											</div>
 										</div>
 									</div>
@@ -101,7 +101,7 @@
 										<div class="card shadow mt-3">
 											<div class="card-body">
 												<h4 class="card-title">Meja No 6</h4>
-												<input type="radio" name="no_meja" id="" value="1"> Pilih
+												<input type="radio" name="no_meja" id="" value="6"> Pilih
 											</div>
 										</div>
 									</div>
@@ -109,7 +109,7 @@
 										<div class="card shadow mt-3">
 											<div class="card-body">
 												<h4 class="card-title">Meja No 7</h4>
-												<input type="radio" name="no_meja" id="" value="1"> Pilih
+												<input type="radio" name="no_meja" id="" value="7"> Pilih
 											</div>
 										</div>
 									</div>
@@ -117,7 +117,7 @@
 										<div class="card shadow mt-3">
 											<div class="card-body">
 												<h4 class="card-title">Meja No 8</h4>
-												<input type="radio" name="no_meja" id="" value="1"> Pilih
+												<input type="radio" name="no_meja" id="" value="8"> Pilih
 											</div>
 										</div>
 									</div>
@@ -131,7 +131,7 @@
 							</div>
 							<div class="col-md-6 mt-5">
 								<div class="form-group">
-									<textarea name="keterangan" class="form-control @error('keterangan') is-invalid @enderror" id="" cols="30" rows="10">masukkan pesan anda di sini!</textarea>
+									<textarea name="keterangan" class="form-control" id="" cols="30" rows="10" placeholder="masukkan pesan anda di sini!"></textarea>
 									@error('keterangan')
 										<span class="invalid-feedback">Masukkan data yang benar!</span>
 									@enderror

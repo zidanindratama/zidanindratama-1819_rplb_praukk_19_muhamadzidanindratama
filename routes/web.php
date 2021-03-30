@@ -11,7 +11,7 @@ use RealRashid\SweetAlert\Facades\Alert;
 use Spatie\Activitylog\Models\Activity;
 
 Route::get('/activity', function () {
-    $activities = Activity::all();
+    $activities = Activity::paginate(15);
     // dd($activities[5]['properties']['attributes']['name']);
     return view('dashboard-petugas.activity.index', compact('activities'));
 });
@@ -39,7 +39,7 @@ Route::get('/', function () {
 Route::get('/dashboard', function () {
     $data = [
         'kasir' => User::where('role', 'Kasir')->count(),
-        'waiter' => User::where('role', 'Waiter')->count(),
+        'pelanggan' => User::where('role', 'Pelanggan')->count(),
         'menu' => Menu::where('status', 'Tersedia')->count(),
         'pemasukan' => Order::where('payment_status', 'paid')->sum('grand_total'),
         'orders' => Order::orderBy('created_at', 'DESC')
@@ -49,6 +49,14 @@ Route::get('/dashboard', function () {
     return view('dashboard-petugas.index', $data);
 });
 
+
+Route::get('/warung/about', function(){
+    return view('default.about');
+});
+
+Route::get('/warung/cara', function(){
+    return view('default.cara');
+});
 /*
 |--------------------------------------------------------------------------
 | ROUTE DEFAULT
@@ -128,8 +136,6 @@ Route::get('/akun', 'CobaController@akun')->name('akun');
 */
 Route::get('/warung', 'DefaultController@index');
 Route::get('/warung/akun', 'HomeController@akunDefault');
-Route::get('/warung/about', 'HomeController@about');
-Route::get('/warung/cara', 'HomeController@cara');
 Route::get('/warung/list', 'DefaultController@list');
 Route::get('/warung/create', 'DefaultController@create');
 Route::get('/warung/{warung}', 'DefaultController@show')->name('warung.show');

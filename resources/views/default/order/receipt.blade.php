@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-
+@section('judul', 'Receipt | WarungKita')
 <head>
     <title>Receipt</title>
     <!-- Required meta tags -->

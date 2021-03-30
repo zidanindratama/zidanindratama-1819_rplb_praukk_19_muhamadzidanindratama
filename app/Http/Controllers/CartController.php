@@ -103,6 +103,12 @@ class CartController extends Controller
         ]);
 
 		$params = $request->except('_token');
+
+		 if (!isset($items)){
+            Alert::error('Gagal','Data pesanan gagal diubah');
+            return redirect('/carts');
+        }
+
 		if ($items = $params['items']) {
 			foreach ($items as $cartID => $item) {
 				$cartItem = $this->_getCartItem($cartID);

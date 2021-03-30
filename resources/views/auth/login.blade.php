@@ -1,5 +1,5 @@
 @extends('layout-default.home')
-
+@section('judul', 'Login Akun | WarungKita')
 @section('content')
             <div class="login-page container pt-5">
                 <section class="home container pt-5">

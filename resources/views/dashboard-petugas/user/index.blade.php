@@ -23,6 +23,7 @@
                                                 <tr class="bg-light">
                                                     <th class="border-top-0">Id</th>
                                                     <th class="border-top-0">Nama</th>
+                                                    <th class="border-top-0">Gambar</th>
                                                     <th class="border-top-0">Level</th>
                                                     <th class="border-top-0">Username</th>
                                                     <th class="border-top-0">Aksi</th>
@@ -33,6 +34,12 @@
                                                 <tr>
                                                     <td scope="row">{{$user->id}}</td>
                                                     <td>{{$user->name}}</td>
+                                                    <td>@if($user->gambar == null) 
+                                                            <img src="{{asset('warung_kita/assets/img/default.jpg')}}" alt="" class="img-fluid rounded" style="width: 200px !important;">
+                                                        @else
+                                                            <img src="/{{$user->gambar}}" alt="" class="img-fluid" class="img-fluid rounded" style="width: 200px !important;">
+                                                        @endif
+                                                    </td>
                                                     <td>{{$user->role}}</td>
                                                     <td>{{$user->username}}</td>
                                                     <td>

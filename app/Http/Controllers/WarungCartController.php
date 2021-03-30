@@ -100,6 +100,10 @@ class WarungCartController extends Controller
     public function update(Request $request)
 	{
 		$params = $request->except('_token');
+        if (\Cart::isEmpty()) {
+            Alert::error('Gagal','Data pesanan gagal diubah');
+			return redirect('/keranjang');
+		}
 		if ($items = $params['items']) {
 			foreach ($items as $cartID => $item) {
 				$cartItem = $this->_getCartItem($cartID);

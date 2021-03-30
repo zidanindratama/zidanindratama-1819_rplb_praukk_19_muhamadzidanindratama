@@ -137,7 +137,7 @@
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="form-group">
-                                                        <textarea name="keterangan" class="form-control" id="" cols="30" rows="10">masukkan pesan anda di sini!</textarea>
+                                                        <textarea name="keterangan" class="form-control" id="" cols="30" rows="10" placeholder="masukkan pesan anda di sini!"></textarea>
                                                         @error('keterangan')
                                                             <span class="invalid-feedback">Masukkan data yang benar!</span>
                                                         @enderror

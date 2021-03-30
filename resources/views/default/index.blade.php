@@ -1,5 +1,5 @@
 @extends('layout-default.home')
-
+@section('judul', 'Index | WarungKita')
 @section('content')
 		<section class="home bg-light">
                      <div class="container">

@@ -14,6 +14,13 @@
                                         <form action="/user/{{$user->id}}" method="post">
                                             @csrf
                                             @method('put')
+                                            <div class="py-5 d-flex justify-content-center">
+                                                @if($user->gambar == null) 
+                                                    <img src="{{asset('warung_kita/assets/img/default.jpg')}}" alt="" class="img-fluid rounded" style="width: 500px !important;">
+                                                @else
+                                                    <img src="/{{$user->gambar}}" alt="" class="img-fluid" class="img-fluid rounded" style="width: 500px !important;">
+                                                @endif
+                                            </div>
                                             <div class="row">
                                                 <div class="col-md-6">
                                                     <p>Nama : </p>

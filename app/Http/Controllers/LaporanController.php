@@ -9,6 +9,7 @@ use App\Order;
 use App\Payment;
 use App;
 use PDF;
+use Illuminate\Support\Facades\DB;
 
 class LaporanController extends Controller
 {
@@ -37,9 +38,11 @@ class LaporanController extends Controller
     public function create()
     {
         PDF::setOptions(['dpi' => 150, 'defaultFont' => 'sans-serif']);
-
-        $pemasukan = Order::all();
-        $pdf = PDF::loadView('dashboard-petugas.laporan.pdf', compact('pemasukan'));
+        $data = [
+            'pemasukan' => DB::table('orders')->where('payment_status', 'paid')->get(),
+            'belum_bayar' => DB::table('orders')->where('payment_status', 'unpaid')->get(),
+        ];
+        $pdf = PDF::loadView('dashboard-petugas.laporan.pdf', $data);
         return $pdf->download('Laporan-pemasukan-warung-kita.pdf');
     }
 }

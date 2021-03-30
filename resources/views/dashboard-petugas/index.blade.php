@@ -6,8 +6,8 @@
                                     <div class="col-sm-3">
                                         <div class="card">
                                             <div class="card-body">
-                                                <h5 class="card-title mb-4">Waiter</h5>
-                                                <h1 class="display-5 mt-1 mb-3">{{$waiter}}</h1>
+                                                <h5 class="card-title mb-4">Pelanggan</h5>
+                                                <h1 class="display-5 mt-1 mb-3">{{$pelanggan}}</h1>
                                                 <div class="mb-1">
                                                     <span class="text-danger">
                                                 </div>
@@ -57,6 +57,8 @@
                                             <thead>
                                                 <tr class="bg-light">
                                                     <th class="border-top-0">Id</th>
+                                                    <th class="border-top-0">No Meja</th>
+                                                    <th class="border-top-0">Keterangan</th>
                                                     <th class="border-top-0">Grand Total</th>
                                                     <th class="border-top-0">Status</th>
                                                     <th class="border-top-0">Aksi</th>
@@ -68,10 +70,18 @@
                                                         <td>
                                                             {{ $order->id }}<br>
                                                         </td>
+                                                        <td>{{ $order->no_meja }}</td>
+                                                        <td>{{ $order->keterangan }}</td>
                                                         <td>@currency($order->grand_total)</td>
                                                         <td>{{ $order->status }}</td>
                                                         <td>
-                                                            <a href="{{ url('orders/received/'. $order->id) }}" class="btn btn-info btn-sm">details</a>
+                                                            @if (!$order->isPaid())
+                                                            <a href="{{ $order->payment_url }}" class="btn btn-primary btn-sm">Lakukan Pembayaran</a>
+                                                            @endif
+                                                            @if ($order->isPaid())
+                                                                <a href="{{ url('/warung/orders/receipt/'. $order->id) }}" class="btn btn-primary btn-sm">Cetak kwitansi</a>
+                                                            @endif
+                                                            <a href="{{ url('/orders/received/'. $order->id) }}" class="btn btn-info btn-sm">Detail</a>
                                                         </td>
                                                     </tr>
                                                 @empty

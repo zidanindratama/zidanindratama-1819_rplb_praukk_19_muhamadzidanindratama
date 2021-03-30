@@ -11,7 +11,8 @@
                                             </div>
                                         </div>
                                         <!-- title -->
-                                        <table class="table v-middle">
+                                        <div class="table-responsive">
+                                            <table class="table v-middle">
                                             <thead>
                                                 <tr class="bg-light">
                                                     <th class="border-top-0">Id</th>
@@ -37,6 +38,7 @@
                                                 @endforelse
                                             </tbody>
                                         </table>
+                                        </div>
                                         <div class="row mt-5 pt-5">
                                             <div class="col-md-6">
                                                  <div id="accordion">

@@ -120,18 +120,30 @@ class UserController extends Controller
             'username' => 'required',
         ]);
 
-        $input = [
-            'name' => $request->name,
-            'username' => $request->username,
-            'email' => $request->email,
-            'role' => $request->role,
-            'password' => Auth::user()->password,
-        ];
-        $user = User::findOrFail($id);
-        $validasi = $user->update($input);
-        if($validasi){
-            Alert::success('Data user berhasil diubah');
+        if($request->input('password')) {
+            $user_data = [
+                'name' => $request->name,
+                'username' => $request->username,
+                'email' => $request->email,
+                'role' => $request->role,
+                'password' => bcrypt($request->password)
+            ];
         }
+        else{
+            $user_data = [
+                'name' => $request->name,
+                'username' => $request->username,
+                'email' => $request->email,
+                'role' => $request->role,
+            ];
+        }
+
+        $user = User::findOrFail($id);
+        $validasi = $user->update($user_data);
+        if($validasi){
+            Alert::success('Berhasil', 'Data user berhasil diubah');
+        }
+        
         return redirect('/user');
     }
 

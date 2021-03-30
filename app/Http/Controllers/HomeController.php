@@ -83,14 +83,4 @@ class HomeController extends Controller
         }
         return redirect('/warung/akun');
     }
-
-    public function about()
-    {
-        return view('default.about');
-    }
-
-    public function cara()
-    {
-        return view('default.cara');
-    }
 }
