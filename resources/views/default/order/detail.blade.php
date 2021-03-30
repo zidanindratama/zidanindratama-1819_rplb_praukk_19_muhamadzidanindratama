@@ -1,5 +1,5 @@
 @extends('layout-default.home')
-
+@section('judul', 'Detail Menu | WarungKita')
 @section('content')
 <section class="home detail" style="padding-top: 50px;">
               <div class="container">
