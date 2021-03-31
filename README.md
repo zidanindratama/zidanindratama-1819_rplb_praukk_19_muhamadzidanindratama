@@ -16,13 +16,13 @@ WarungKita adalah sebuah aplikasi order menu pada restoran dengan mudah dan efis
 
 Dalam pembuatan aplikasi ini, WarungKita memakai framework PHP yaitu Laravel dan berbagai macam package dan plugin.
 
-| Package                                                                                     | Description |
-| ------------------------------------------------------------------------------------------- | ----------- |
-| **[realrashid/sweet-alert](https://github.com/realrashid/sweet-alert)**                     | Title       |
-| **[barryvdh/laravel-dompdf](https://github.com/barryvdh/laravel-dompdf)**                   | Text        |
-| **[binarytorch/larecipe](https://larecipe.binarytorch.com.my/)**                            | Text        |
-| **[darryldecode/laravelshoppingcart](https://github.com/darryldecode/laravelshoppingcart)** | Text        |
-| **[spatie/laravel-activitylog](https://github.com/spatie/laravel-activitylog)**             | Text        |
+| Package                                                                                     | Description                                             |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------- |
+| **[realrashid/sweet-alert](https://github.com/realrashid/sweet-alert)**                     | **[michalsnik/aos](https://github.com/michalsnik/aos)** |
+| **[barryvdh/laravel-dompdf](https://github.com/barryvdh/laravel-dompdf)**                   | **[ckeditor/ckeditor4](https://ckeditor.com/)**         |
+| **[binarytorch/larecipe](https://larecipe.binarytorch.com.my/)**                            | **[tawk.to](https://www.tawk.to/)**                     |
+| **[darryldecode/laravelshoppingcart](https://github.com/darryldecode/laravelshoppingcart)** | **[disqus](https://disqus.com/)**                       |
+| **[spatie/laravel-activitylog](https://github.com/spatie/laravel-activitylog)**             |                                                         |
 
 ## Contributing
 
