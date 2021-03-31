@@ -24,18 +24,15 @@ Dalam pembuatan aplikasi ini, WarungKita memakai framework PHP yaitu Laravel dan
 | **[darryldecode/laravelshoppingcart](https://github.com/darryldecode/laravelshoppingcart)** | **[disqus](https://disqus.com/)**                       |                                                                       | **[JavaScript](https://github.com/zidanindratama/zidanindratama-1819_rplb_praukk_19_muhamadzidanindratama)**  |
 | **[spatie/laravel-activitylog](https://github.com/spatie/laravel-activitylog)**             |                                                         |                                                                       | **[Bootstrap 4](https://github.com/zidanindratama/zidanindratama-1819_rplb_praukk_19_muhamadzidanindratama)** |
 
-## Contributing
+## Aplikasi WarungKita punya fitur apa saja?
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+-   Login
+-   Register
+-   Upload avatar pelanggan
+-   Komentar
+-   Live chat
+-   Sistem keranjang
+-   Cetak kwitansi
+-   Laporan pemasukan
+-   Log activity
+-   Sistem pembayaran yang terintegrasi dengan Midtrans
