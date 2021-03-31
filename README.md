@@ -16,9 +16,9 @@ WarungKita adalah sebuah aplikasi order menu pada restoran dengan mudah dan efis
 
 Dalam pembuatan aplikasi ini, WarungKita memakai framework PHP yaitu Laravel dan berbagai macam package dan plugin.
 
-| Package                                                                                     | Description                                             |
-| ------------------------------------------------------------------------------------------- | ------------------------------------------------------- |
-| **[realrashid/sweet-alert](https://github.com/realrashid/sweet-alert)**                     | **[michalsnik/aos](https://github.com/michalsnik/aos)** |
+| Package                                                                                     | Plugin                                                  | Payment Gateway                                                       |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------- | --------------------------------------------------------------------- |
+| **[realrashid/sweet-alert](https://github.com/realrashid/sweet-alert)**                     | **[michalsnik/aos](https://github.com/michalsnik/aos)** | **[midtrans/midtrans-php](https://github.com/Midtrans/midtrans-php)** |
 | **[barryvdh/laravel-dompdf](https://github.com/barryvdh/laravel-dompdf)**                   | **[ckeditor/ckeditor4](https://ckeditor.com/)**         |
 | **[binarytorch/larecipe](https://larecipe.binarytorch.com.my/)**                            | **[tawk.to](https://www.tawk.to/)**                     |
 | **[darryldecode/laravelshoppingcart](https://github.com/darryldecode/laravelshoppingcart)** | **[disqus](https://disqus.com/)**                       |
