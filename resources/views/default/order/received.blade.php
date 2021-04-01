@@ -22,6 +22,7 @@
 									<table class="table">
 										<thead>
 											<tr>
+												<th>Invoice</th>
 												<th>Id</th>
 												<th>Item</th>
 												<th>Quantity</th>
@@ -32,6 +33,7 @@
 										<tbody>
                                             @forelse ($order->orderItems as $item)
                                             <tr>
+												<td>{{$order->code}}</td>
                                                 <td>{{ $item->id }}</td>
                                                 <td>{{ $item->name }}</td> 
                                                 <td>{{ $item->quantity }}</td>

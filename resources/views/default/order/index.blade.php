@@ -22,7 +22,7 @@
 									<table class="table">
 										<thead>
 											<tr>
-												<th>Id</th>
+												<th>Invoice</th>
 												<th>No Meja</th>
 												<th>Keterangan</th>
 												<th>Grand Total</th>
@@ -34,7 +34,7 @@
                                             @forelse ($orders as $order)
                                                 <tr>    
                                                     <td>
-                                                        {{ $order->id }}<br>
+                                                        {{ $order->code }}<br>
                                                     </td>
                                                     <td>{{ $order->no_meja }}</td>
                                                     <td>{{ $order->keterangan }}</td>

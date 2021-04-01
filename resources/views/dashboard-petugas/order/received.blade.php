@@ -56,7 +56,7 @@
                                                                     <table class="table v-middle">
                                                                         <thead>
                                                                             <tr class="bg-light">
-                                                                                <th class="border-top-0">Id</th>
+                                                                                <th class="border-top-0">Invoice</th>
                                                                                 <th class="border-top-0">Dibuat Oleh</th>
                                                                                 <th class="border-top-0">Dibuat Pada</th>
                                                                                 <th class="border-top-0">Subtotal</th>
@@ -67,7 +67,7 @@
                                                                         </thead>
                                                                     <tbody>
                                                                        <tr>
-                                                                            <td>{{$order->id}}</td>
+                                                                            <td>{{$order->code}}</td>
                                                                             <td>{{ $order->customer_first_name }} {{ $order->customer_last_name }}</td>
                                                                             <td>{{ $order->created_at }}</td>
                                                                             <td>@currency($order->base_total_price)</td>

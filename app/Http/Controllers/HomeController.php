@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Menu;
 use App\User;
+use App\Order;
 use App;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
@@ -83,4 +84,10 @@ class HomeController extends Controller
         }
         return redirect('/warung/akun');
     }
+
+    public function receipt($orderId)
+	{
+        $order = Order::findOrFail($orderId);
+		return view('default.order.receipt', compact('order'));
+	}
 }

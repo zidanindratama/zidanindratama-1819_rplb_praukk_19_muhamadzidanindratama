@@ -37,3 +37,7 @@ Dalam pembuatan aplikasi ini, WarungKita memakai framework PHP yaitu Laravel dan
 -   Laporan pemasukan
 -   Log activity
 -   Sistem pembayaran yang terintegrasi dengan Midtrans
+
+## Link demo WarungKita
+
+[WarungKita - Warung Cepat Saji](https://warungkita001.000webhostapp.com/)
