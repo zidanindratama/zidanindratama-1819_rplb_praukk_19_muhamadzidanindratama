@@ -25,16 +25,13 @@
 											<tr>
 												<th>Menu</th>
 												<th>Harga</th>
-												<th>Jumlah</th>
 												<th>Total</th>
+												<th>Jumlah</th>
 												<th>Aksi</th>
 											</tr>
 										</thead>
 										<tbody>
 											@forelse ($items as $item)
-											@php
-												$image = !empty($item->gambar) ?  asset( $item->gambar )  : asset('assets/img/2.jpg') 
-											@endphp
 											<tr>
 												<td>{{$item->name}}</td>
 												<td>@currency($item->price)</td>

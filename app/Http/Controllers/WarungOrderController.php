@@ -24,6 +24,7 @@ class WarungOrderController extends Controller
 	{
 
 		if (\Cart::isEmpty()) {
+			Alert::error('Gagal','Checkout pesanan gagal');
 			return redirect('/keranjang');
 		}
 

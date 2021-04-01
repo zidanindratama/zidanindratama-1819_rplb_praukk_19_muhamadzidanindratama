@@ -31,6 +31,7 @@ Dalam pembuatan aplikasi ini, WarungKita memakai framework PHP yaitu Laravel dan
 -   Upload avatar pelanggan
 -   Komentar
 -   Live chat
+-   Notifikasi sweet alert
 -   Sistem keranjang
 -   Cetak kwitansi
 -   Laporan pemasukan

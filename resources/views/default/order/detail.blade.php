@@ -24,7 +24,7 @@
 													</div>
 													<div class="col-md-6">
 														   <div class="form-group">
-																  <input type="number" name="quantity" class="form-control" id="name" placeholder="Input disini" required>
+																  <input type="number" name="quantity" class="form-control" id="name" placeholder="Input disini" min="1" max="999" required>
 														   </div>
 													</div>
 												</div>	

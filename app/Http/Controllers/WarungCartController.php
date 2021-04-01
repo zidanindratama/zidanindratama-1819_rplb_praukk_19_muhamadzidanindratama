@@ -61,10 +61,10 @@ class WarungCartController extends Controller
 			'associatedModel' => $menu,
 		];
 
-        // var_dump($item);
-		\Cart::add($item);
-		Alert::success('Berhasil','Data pesanan berhasil dimasukkan kedalam keranjang');
-        return redirect('/warung');
+        dd($item['gambar']);
+		// \Cart::add($item);
+		// Alert::success('Berhasil','Data pesanan berhasil dimasukkan kedalam keranjang');
+        // return redirect('/warung');
     }
 
     private function _getItemQuantity($itemId)
