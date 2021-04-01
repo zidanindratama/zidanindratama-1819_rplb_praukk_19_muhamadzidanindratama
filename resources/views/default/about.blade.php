@@ -29,6 +29,9 @@
                                           </div>
                                    </div>
                             </div>
+                            <h3>Github Repo</h3>
+                            <div class="heading-line"></div>
+                            <img src="{{asset('warung_kita/assets/img/github-repo.png')}}" alt="" class="img-fluid py-3">
                      </div>
               </div>
 @endsection
