@@ -54,8 +54,8 @@ Dalam pembuatan aplikasi ini, WarungKita memakai framework PHP yaitu Laravel dan
 -   Extract file databse yang bernama "rplb_praukk_jidan.zip"
 -   Import file database yang bernama "rplb_praukk_jidan.sql" ke phpmyadmin
 -   Ketik di terminal atau di command prompt "cp .env.example .env"
--   Konfigurasi database di file .env lalu mengganti DB_DATABASE menjadi "rplb_praukk_jidan"
--   Konfigurasi server key midtrans di file .env lalu mengganti MIDTRANS_SERVER_KEY menjadi "server_key_akun_midtrans_anda"
+-   Konfigurasi database di file .env lalu isi DB_DATABASE dengan "rplb_praukk_jidan"
+-   Konfigurasi server key midtrans di file .env dengan membuat MIDTRANS_SERVER_KEY yang isinya "server_key_akun_midtrans_anda"
 -   Lalu jangan lupa untuk ketik "php artisan key:generate"
 -   Untuk jaga-jaga ketik "php artisan cache:clear" dan "php artisan config:clear" di terminal atau di command prompt
 -   Kemudian ketik "php artisan serve" di terminal atau di command prompt
