@@ -41,3 +41,22 @@ Dalam pembuatan aplikasi ini, WarungKita memakai framework PHP yaitu Laravel dan
 ## Link demo WarungKita
 
 [WarungKita - Warung Cepat Saji](https://warungkita001.000webhostapp.com/)
+
+## Cara menginstall WarungKita
+
+-   Pastikan komputer atau laptop anda sudah terinstall composer dan gitbash
+-   Clone project WarungKita ini (download)
+-   Extract file.zip kemudian buka text editor
+-   Ketik di terminal atau di command prompt "composer install"
+-   Tunggu beberapa saat
+-   Nyalakan XAMPP (WAJIB)
+-   Buat database dengan nama "rplb_praukk_jidan" di phpmyadmin
+-   Extract file databse yang bernama "rplb_praukk_jidan.zip"
+-   Import file database yang bernama "rplb_praukk_jidan.sql" ke phpmyadmin
+-   Ketik di terminal atau di command prompt "cp .env.example .env"
+-   Konfigurasi database di file .env lalu mengganti DB_DATABASE menjadi "rplb_praukk_jidan"
+-   Konfigurasi server key midtrans di file .env lalu mengganti MIDTRANS_SERVER_KEY menjadi "server_key_akun_midtrans_anda"
+-   Lalu jangan lupa untuk ketik "php artisan key:generate"
+-   Untuk jaga-jaga ketik "php artisan cache:clear" dan "php artisan config:clear" di terminal atau di command prompt
+-   Kemudian ketik "php artisan serve" di terminal atau di command prompt
+-   Lalu buka browser setelah itu ketik "http://127.0.0.1:8000/"
